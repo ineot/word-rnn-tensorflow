@@ -18,8 +18,8 @@ def main():
                        help='number of words to sample')
     parser.add_argument('--prime', type=str, default=' ',
                        help='prime text')
-    parser.add_argument('--pick', type=str, default=0,
-                       help='0 = weighted pick, 1 = beam search pick')
+    parser.add_argument('--pick', type=int, default=1,
+                       help='1 = weighted pick, 2 = beam search pick')
     parser.add_argument('--sample', type=int, default=1,
                        help='0 to use max at each timestep, 1 to sample at each timestep, 2 to sample on spaces')
 

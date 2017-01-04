@@ -114,7 +114,7 @@ class Model():
             [probs, state] = sess.run([self.probs, self.final_state], feed)
             p = probs[0]
 
-            if pick == 0:
+            if pick == 1:
                 if sampling_type == 0:
                     sample = np.argmax(p)
                 elif sampling_type == 2:
@@ -124,7 +124,7 @@ class Model():
                         sample = np.argmax(p)
                 else: # sampling_type == 1 default:
                     sample = weighted_pick(p)
-            elif pick == 1:
+            elif pick == 2:
                 sample = beam_search_pick(p)
 
             pred = words[sample]
