@@ -125,7 +125,7 @@ class Model():
                 else: # sampling_type == 1 default:
                     sample = weighted_pick(p)
             elif pick == 1:
-                beam_search_pick(p)
+                sample = beam_search_pick(p)
 
             pred = words[sample]
             ret += ' ' + pred
